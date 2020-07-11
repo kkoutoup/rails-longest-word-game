@@ -1,1 +1,6 @@
-<h1>Find the longest word</h1>
+<h1>New Game</h1>
+<ul id="letterList">
+  <% @letters.each do |letter| %>
+    <li><%= letter.upcase %></li>
+  <% end %>
+</ul>
