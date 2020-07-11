@@ -4,3 +4,9 @@
     <li><%= letter.upcase %></li>
   <% end %>
 </ul>
+<p id="userPrompt">What's the longest work you can create with these letters?</p>
+<form action="/score" method="post">
+  <input type="text" name="question" placeholder="Type your word here" id="inputField">
+  <input type="submit" value="Submit" id="submitButton">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+</form>
