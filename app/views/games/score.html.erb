@@ -1,3 +1,7 @@
 <h1>Result</h1>
-<%= params %>
+  <%if @english_word == false %>
+    <p>Sorry but <span class="boldUpperCaseText"> <%= @answer %> </span> is not an English word.</p>
+  <% else %>
+    <p> <span class="boldText">Congratulations!</span> <%= @answer.upcase %> is an English word!</p>
+  <% end %>
 <%= link_to 'Play again', new_path, {id: 'letterGrid'} %>
